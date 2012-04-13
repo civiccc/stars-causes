@@ -1,5 +1,3 @@
-RAILS_GEM_VERSION = '2.3.14' unless defined? RAILS_GEM_VERSION
-
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
@@ -8,6 +6,9 @@ Rails::Initializer.run do |config|
   config.gem 'hoptoad_notifier'
 
   config.action_mailer.default_url_options ||= {:host => 'localhost:3000'}
+  config.action_controller.session = {
+    :key => "_mockr_session", :secret => "my cat is yellow"
+  }
 end
 
 ActionView::Helpers::AssetTagHelper.
