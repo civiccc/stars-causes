@@ -37,6 +37,7 @@ module ApplicationHelper
     url.path += Digest::MD5.hexdigest(email.strip.downcase)
     url.query = "d=#{URI.encode("http://#{ENV['APP_HOST']}#{image_path('user.png')}")}"
     url.to_s
+
   end
 
   def name(user, opts={})
@@ -53,6 +54,7 @@ module ApplicationHelper
     image_url = case type
     when 'user'
       gravatar_url(subject.email)
+      "http://graph.facebook.com/#{subject.facebook_uid.to_i}/picture?type=normal"
     else
       "#{type}.png"
     end
