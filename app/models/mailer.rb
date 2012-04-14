@@ -1,7 +1,7 @@
 ActionMailer::Base.default_content_type = 'text/html'
 
 class Mailer < ActionMailer::Base
-  FROM = "Starbuck <noreply@#{ENV['APP_HOST']}>"
+  FROM = "noreply@#{ENV['APP_HOST']}"
 
   def star(star)
     subject "#{star.to_sentence} got a star!"
