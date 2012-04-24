@@ -45,6 +45,6 @@ class Star < ActiveRecord::Base
   end
 
   after_create do |star|
-    #Mailer.deliver_star(star)
+    Mailer.deliver_star(star)
   end
 end

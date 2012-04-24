@@ -5,7 +5,7 @@ class Mailer < ActionMailer::Base
 
   def star(star)
     subject "#{star.to_sentence} got a star!"
-    recipients EVERYONE
+    recipients User.active.map(&:email)
     from FROM
     body :star => star
   end
@@ -17,7 +17,7 @@ class Mailer < ActionMailer::Base
     num_froms = superstars.map{|s| s.stars.map(&:from_id)}.flatten.uniq.size
 
     subject "Superstars - #{Date.today.beginning_of_week.strftime('%B %d, %Y')}"
-    recipients EVERYONE
+    recipients User.active.map(&:email)
     from FROM
 
     body :superstars => Superstar.last_week,
