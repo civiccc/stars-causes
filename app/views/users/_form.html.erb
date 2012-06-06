@@ -15,6 +15,10 @@
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
   </p>
+  <p>
+    <%= f.label :facebook_uid %>
+    <%= f.text_field :facebook_uid %>
+  </p>
   <%- unless @user.new_record? -%>
     <p>
       <%= f.label :active %>
