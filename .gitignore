@@ -8,4 +8,3 @@ config/database.yml
 config/facebooker.yml
 config/initializers/hoptoad.rb
 db/schema.rb
-db/*
