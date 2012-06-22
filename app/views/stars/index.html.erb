@@ -1,11 +1,9 @@
 <% stylesheet 'stars' %>
 
 <% if @stars.any? %>
-  <%= render :partial => 'featured_star',
-             :locals => {:star => @stars.first, :size => :small} %>
   <h2>Recent Stars</h2>
   <ul id="recent_stars">
-    <%= render :partial => 'star', :collection => @stars[1..-1] %>
+    <%= render :partial => 'star', :collection => @stars %>
   </ul>
   <div id="superstars">
     <h2>Last Week's Superstars</h2>
