@@ -1,5 +1,5 @@
 class Star < ActiveRecord::Base
-  default_scope :include => :seconds, :order => 'id desc'
+  default_scope :include => [:comments, :seconds], :order => 'id desc'
 
   validates_presence_of :from, :to, :reason
 
@@ -7,6 +7,7 @@ class Star < ActiveRecord::Base
 
   has_and_belongs_to_many :to, :class_name => 'User'
 
+  has_many :comments
   has_many :seconds
 
   named_scope :during, lambda { |range|

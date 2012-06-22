@@ -10,4 +10,14 @@
     </div>
   </div>
   <%= render :partial => 'stars/second', :locals => {:star => star} %>
+  <ul class="comments">
+    <% star.comments.each do |comment| %>
+      <li>
+        <%= photo(comment.author) %>
+        <%= comment.author.name %>
+        <%= comment.body %>
+        <%= friendly_time(comment.created_at) %>
+      </li>
+    <% end %>
+  </ul>
 </li>
