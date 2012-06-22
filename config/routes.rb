@@ -2,6 +2,8 @@ ActionController::Routing::Routes.draw do |map|
   map.login  'login',  :controller => 'user_sessions', :action => 'new'
   map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'
 
+  map.resources :comments
+
   map.resources :stars do |stars|
     stars.resources :seconds
   end
