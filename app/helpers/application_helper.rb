@@ -10,7 +10,7 @@ module ApplicationHelper
   def second_button(star, text="Second")
     if current_user.can_second?(star)
       link_to text, star_seconds_url(star),
-        :method => :post
+        :method => :post, :class => "second"
     end
   end
 

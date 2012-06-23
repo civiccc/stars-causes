@@ -191,10 +191,13 @@ h2 {
 }
 .actions-and-seconds {
   border-top: 1px solid #d4ca9d;
+  padding: 16px 0;
+}
+.comments li {
+  border-top: 1px solid #d4ca9d;
 }
 .actions-and-seconds,
 .comments li {
-  border-bottom: 1px solid #d4ca9d;
   font-size: 12px;
   padding: 8px 0;
 }
@@ -202,7 +205,7 @@ h2 {
 .comments li img {
   float: left;
   height: 30px;
-  margin-right: 5px;
+  margin-right: 8px;
   width: 30px;
 }
 .comments li .body {
@@ -215,16 +218,22 @@ h2 {
   margin-bottom: 20px;
 }
 
-.actions-and-seconds .second {
-  float: right;
-  font-size: 12px;
-  padding: 8px 0;
-}
-
 #comment_body {
   border-radius: 5px;
   background-color: rgba(255, 255, 255, .2);
   border: 1px solid #d4ca9d;
   padding: 10px;
   width: 540px;
+}
+
+.second {
+  background-image: url('/images/second_icon.png');
+  background-repeat: no-repeat;
+  padding-left: 17px;
+}
+
+.seconds_count {
+  color: #958e6b;
+  float: right;
+  margin-top: 8px;
 }

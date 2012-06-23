@@ -10,18 +10,21 @@
       </div>
       <div class="time">
         Awarded by <%= star.from.name %> on 
-        <%= friendly_time(star.created_at) %>
+        <%= friendly_time(star.created_at) %> &nbsp;
+        <% if star.seconds.empty? %>
+          <%= second_button(star) %>
+        <% end %>
       </div>
     </div>
   </div>  
-  <div class="actions-and-seconds clearfix">
-    <%= star.seconds.map{|second| photo(second.user)} %>
-    <% if current_user.can_second?(star) %>
-      <div class="second">
-        <%= second_button(star) %>
+  <% if star.seconds.any? %>
+    <div class="actions-and-seconds clearfix">
+      <div class="seconds_count">
+        <%= pluralize(star.seconds.size, "second") %>
       </div>
-    <% end %>
-  </div>
+      <%= star.seconds.map{|second| photo(second.user)} %>
+    </div>
+  <% end %>
   <ul class="comments">
     <% star.comments.each do |comment| %>
       <li class="clearfix">

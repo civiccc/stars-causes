@@ -51,7 +51,7 @@ label {
 
 #container {
   background: rgba(32, 32, 30, 0.94);
-  padding: 30px;
+  padding: 30px 30px 200px;
   margin: 0 auto;
   width: 960px;
 }
