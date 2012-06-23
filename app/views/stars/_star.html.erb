@@ -8,6 +8,20 @@
     <div class="time">
       <%= friendly_time(star.created_at) %>
     </div>
+     <div class="new_comment">
+          <% form_for(Comment.new(:star_id => star.id, :author_id => current_user.id)) do |f| %>
+            <%= f.error_messages %>
+	    <%= f.hidden_field :star_id %>
+	    <%= f.hidden_field :author_id %>
+            <p>
+              <%= f.label :body %><br />
+              <%= f.text_field :body %>
+            </p>
+            <p>
+              <%= f.submit 'Create' %>
+            </p>
+          <% end %>
+     </div>
   </div>
   <%= render :partial => 'stars/second', :locals => {:star => star} %>
   <ul class="comments">
