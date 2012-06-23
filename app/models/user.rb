@@ -4,8 +4,8 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :stars
   has_and_belongs_to_many :teams
 
-  named_scope :active,   :conditions => {:active => "1"}
-  named_scope :inactive, :conditions => {:active => "0"}
+  named_scope :active,   :conditions => {:active => true}
+  named_scope :inactive, :conditions => {:active => false}
 
   def can_second?(star)
     return false if [star.from, star.to].flatten.include?(self)
