@@ -54,12 +54,15 @@ label {
 #header {
   margin: 40px 0 20px;
 }
-#header #create_a_star {
+#header .summary {
   float: right;
 }
-#header #create_a_star .button {
-  margin-top: 5px;
+#header .summary img {
+  height: 30px;
+  vertical-align: middle;
+  width: 30px;
 }
+
 #container {
   background: rgba(255, 255, 255, 0.2);
   padding: 20px;

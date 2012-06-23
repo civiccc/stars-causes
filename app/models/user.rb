@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :stars
   has_and_belongs_to_many :teams
 
+  has_many :stars_given, :class_name => 'Star', :foreign_key => :from_id
+
   named_scope :active,   :conditions => {:active => true}
   named_scope :inactive, :conditions => {:active => false}
 
