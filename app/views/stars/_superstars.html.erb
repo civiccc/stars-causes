@@ -1,10 +1,3 @@
-<% if users.any? %>
-  <ul class="superstars sheer round bordered">
-    <%= render :partial => 'superstar', :collection => users %>
-  </ul>
-<% else %>
-  <div class="superstars sheer round bordered no-stars">
-    <h2>No stars this week!</h2>
-    <%= create_a_star_button %>
-  </div>
-<% end %>
+<ol class="superstars">
+ <%= render :partial => 'superstar', :collection => users %>
+</ol>

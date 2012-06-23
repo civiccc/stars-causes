@@ -61,6 +61,8 @@ label {
   margin-top: 5px;
 }
 #container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
   margin: 0 auto;
   width: 960px;
 }

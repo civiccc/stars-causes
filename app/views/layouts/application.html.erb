@@ -14,14 +14,11 @@
     <%= javascript_include_tag 'jquery.scrolling-parallax' %>
   </head>
   <body class="clearfix">
-    <div id="container">
+    <div class="clearfix" id="container">
       <% if flash[:notice] %>
         <div id="flash"><%= flash[:notice] %></div>
       <% end %>
       <div class="clearfix" id="header">
-        <% unless @hide_create_star %>
-          <div id="create_a_star"><%= create_a_star_button %></div>
-        <% end %>
         <%= link_to image_tag('logo-top.png'), root_path %>
       </div>
       <%= yield %>
