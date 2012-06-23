@@ -1,37 +1,45 @@
 <li class="star sheer round clearfix">
-  <%= render :partial => 'shared/photo_pair',
-             :locals => {:star => star, :size => :square} %>
-  <div class="info">
-    <div class="reason">
-      <%= star.reason %>
+  <div class="primary_content clearfix">
+    <div class="recipient">
+      <%= photo(star.to.first) %>
     </div>
-    <div class="time">
-      <%= friendly_time(star.created_at) %>
+    <div class="info">
+      <h2><%= star.to.map(&:name).to_sentence %> got a star</h2>
+      <div class="reason">
+        <%= star.reason %>
+      </div>
+      <div class="time">
+        Awarded by <%= star.from.name %> on 
+        <%= friendly_time(star.created_at) %>
+      </div>
     </div>
-     <div class="new_comment">
-          <% form_for(Comment.new(:star_id => star.id, :author_id => current_user.id)) do |f| %>
-            <%= f.error_messages %>
-	    <%= f.hidden_field :star_id %>
-	    <%= f.hidden_field :author_id %>
-            <p>
-              <%= f.label :body %><br />
-              <%= f.text_field :body %>
-            </p>
-            <p>
-              <%= f.submit 'Create' %>
-            </p>
-          <% end %>
-     </div>
+  </div>  
+  <div class="actions-and-seconds clearfix">
+    <%= star.seconds.map{|second| photo(second.user)} %>
+    <% if current_user.can_second?(star) %>
+      <div class="second">
+        <%= second_button(star) %>
+      </div>
+    <% end %>
   </div>
-  <%= render :partial => 'stars/second', :locals => {:star => star} %>
   <ul class="comments">
     <% star.comments.each do |comment| %>
-      <li>
+      <li class="clearfix">
         <%= photo(comment.author) %>
-        <%= comment.author.name %>
-        <%= comment.body %>
-        <%= friendly_time(comment.created_at) %>
+        <div class="body">
+          <%= comment.body %>
+        </div>
       </li>
     <% end %>
   </ul>
+  <div class="new_comment">
+       <% form_for(Comment.new(:star_id => star.id, :author_id => current_user.id)) do |f| %>
+         <%= f.error_messages %>
+   <%= f.hidden_field :star_id %>
+   <%= f.hidden_field :author_id %>
+         <p>
+           <%= f.text_field :body %>
+         </p>
+       <% end %>
+  </div>
 </li>

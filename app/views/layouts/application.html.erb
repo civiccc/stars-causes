@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <title>Stars!</title>
-    <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif|Dancing+Script' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="/images/icon.png" />
     <% @stylesheets.uniq.each do |stylesheet| %>
       <%= stylesheet_link_tag stylesheet %>
@@ -14,6 +14,7 @@
     <%= javascript_include_tag 'jquery.scrolling-parallax' %>
   </head>
   <body class="clearfix">
+    <div id="top"></div>
     <div class="clearfix" id="container">
       <% if flash[:notice] %>
         <div id="flash"><%= flash[:notice] %></div>
@@ -25,11 +26,10 @@
           <%= current_user.stars.size %> received
         </div>
 
-        <%= link_to image_tag('logo-top.png'), root_path %>
+        <%= link_to image_tag('logo.png'), root_path %>
       </div>
       <%= yield %>
       <div id="stars"></div>
-      <div id="logo"></div>
       <div id="hills"></div>
     </div>
   </body>

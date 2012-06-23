@@ -7,16 +7,14 @@ module ApplicationHelper
     link_to "&#9733; " + text, new_team_url, :class => 'button'
   end
 
-  def second_button(star, text="Second!")
+  def second_button(star, text="Second")
     if current_user.can_second?(star)
-      link_to "&#9732; " + text, star_seconds_url(star),
-        :class => 'green_button', :method => :post
-    elsif current_user.seconded?(star)
-      content_tag(:div,  "&#10003; Seconded", :class => 'seconded round')
+      link_to text, star_seconds_url(star),
+        :method => :post
     end
   end
 
-  FRIENDLY_TIME_FORMAT = '%H:%M%p on %b %d'
+  FRIENDLY_TIME_FORMAT = '%b %d at %I:%M%p'
   def friendly_time(time)
     time.getlocal.strftime(FRIENDLY_TIME_FORMAT).
          gsub(/(\s|^)0/, '\\1').

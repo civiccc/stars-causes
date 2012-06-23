@@ -2,63 +2,26 @@ h2 {
   font-size: 18px;
 }
 
-#featured_star {
-  margin: 0 0 40px;
-  padding: 30px 50px;
-}
-
-#featured_star .photo_holder {
-  height: 100px;
-  overflow: hidden;
-}
-
-#featured_star .photos {
-  margin-right: 20px;
-}
-
-#featured_star .photos .starred {
-  font-size: 2em;
-}
-
-#featured_star .info {
-  position: relative;
-  width: 550px;
-}
-
-#featured_star .reason {
-  font-size: 35px;
-  line-height: 42px;
-  margin-top: 10px;
-}
-
-#featured_star .second {
-  display: inline-block;
-  margin: 0px 5px;
-}
-
 #recent_stars {
   float: right;
   margin: 0;
-  width: 550px;
+  width: 620px;
 }
 
-#recent_stars li {
-  margin: 10px 0px;
+#recent_stars > li {
+  padding: 30px;
+  margin: 0 0 30px;
+  box-shadow: inset 0 0 0 10px #f9f4db;
 }
 
 #superstars {
+  color: #fff;
   float: left;
-  width: 350px;
+  width: 340px;
 }
 
 #recent_stars > .star {
   position: relative;
-}
-
-#recent_stars .star .second {
-  bottom: 10px;
-  position: absolute;
-  right: 10px;
 }
 
 .star .photos .star {
@@ -92,14 +55,31 @@ h2 {
 }
 
 .star .info {
-  display: inline-block;
-  width: 250px;
+  float: left;
+  width: 380px;
 }
-
+h2 {
+  font-family: 'Dancing Script', serif;
+  font-weight: normal;
+}
+.star h2 {
+  font-size: 35px;
+  margin: .25em 0;
+}
+.star .recipient {
+  background: #f9f4db;
+  float: left;
+  width: 130px;
+  margin-right: 20px;
+  padding: 10px;
+}
+.star .recipient img {
+  height: 130px;
+  width: 130px;
+}
 .star .reason {
-  font-weight: bold;
-  margin-bottom: 5px;
-  overflow: hidden;
+  line-height: 22px;
+  margin: 0 0 10px;
 }
 
 .no-stars {
@@ -208,4 +188,43 @@ h2 {
 #teams .photo {
   display: inline-block;
   margin: 0 5px;
+}
+.actions-and-seconds {
+  border-top: 1px solid #d4ca9d;
+}
+.actions-and-seconds,
+.comments li {
+  border-bottom: 1px solid #d4ca9d;
+  font-size: 12px;
+  padding: 8px 0;
+}
+.actions-and-seconds img,
+.comments li img {
+  float: left;
+  height: 30px;
+  margin-right: 5px;
+  width: 30px;
+}
+.comments li .body {
+  margin-top: 3px;
+}
+#new_comment {
+  margin-top: 10px;
+}
+.primary_content {
+  margin-bottom: 20px;
+}
+
+.actions-and-seconds .second {
+  float: right;
+  font-size: 12px;
+  padding: 8px 0;
+}
+
+#comment_body {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .2);
+  border: 1px solid #d4ca9d;
+  padding: 10px;
+  width: 540px;
 }
