@@ -32,9 +32,8 @@ aside .box ol {
 }
 
 #recent_stars > li {
-  padding: 30px;
+  padding: 20px;
   margin: 0 0 30px;
-  box-shadow: inset 0 0 0 10px #9faebd;
 }
 
 #recent_stars > .star {
@@ -83,7 +82,7 @@ h2 {
 .star h2 {
   font-size: 35px;
   line-height: 40px;
-  margin: .25em 0;
+  margin: .25em 0 .4em;
 }
 .star .recipient {
   background: #f9f4db;
@@ -286,6 +285,7 @@ h2 {
 
 #new_star_form h2 {
   font-size: 18px;
+  letter-spacing: none;
 }
 #new_star_form textarea {
   height: 50px;

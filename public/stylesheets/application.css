@@ -72,6 +72,10 @@ form input[type=submit] {
 .submit_bar input {
   margin-right: 5px;
 }
+.user_photo {
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, .25);
+}
 
 #header {
   margin: 0 auto 40px;
@@ -81,6 +85,12 @@ form input[type=submit] {
   display: block;
   float: left;
   margin-top: 20px;
+  opacity: .8;
+  -webkit-transition-duration: .15s;
+}
+#header .logo img:hover {
+  opacity: 1;
+  -webkit-transition-duration: .15s;
 }
 #header .summary {
   color: #f9f4db;
