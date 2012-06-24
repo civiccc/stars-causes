@@ -88,13 +88,12 @@ h2 {
 .star .recipient {
   background: #f9f4db;
   float: left;
-  width: 130px;
+  width: 150px;
   margin-right: 20px;
-  padding: 10px;
 }
 .star .recipient img {
-  height: 130px;
-  width: 130px;
+  height: 150px;
+  width: 150px;
 }
 .star .reason {
   line-height: 22px;
