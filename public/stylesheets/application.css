@@ -77,19 +77,18 @@ label {
 }
 
 #flash {
-  background-color: #F80;
-  border-bottom: 1px solid #000;
-  border-radius: 0px 5px 5px 0px;
-  -moz-border-radius: 0px 5px 5px 0px;
-  -webkit-border-radius: 0px 5px 5px 0px;
-  color: #000;
-  left: 0px;
-  overflow: hidden;
-  padding: 5px 20px;
-  position: absolute;
-  text-shadow: none;
-  top: 5px;
-  white-space: nowrap;
+  background-color: rgba(237, 214, 64, .8);
+  border-radius: 5px;
+  color: #333;
+  margin: 0 auto 30px;
+  padding: 15px 20px;
+  width: 980px;
+}
+#flash .close_link {
+  color: #333;
+  display: block;
+  float: right;
+  margin-top: 4px;
 }
 
 #hills {

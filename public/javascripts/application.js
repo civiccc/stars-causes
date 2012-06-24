@@ -7,11 +7,12 @@ Stars.Scene = (function($) {
       bgWidth: '100%',
       staticSpeed: 0.1
     });
-    setTimeout(function() {
-      $("#flash").hide('slide', {direction: 'left'})
-    }, 10000);
+    $("#flash .close_link").click(function(e) {
+      e.preventDefault();
+      $("#flash").hide();
+    })
   };
-
+  
   return {
     init: init
   };

@@ -15,9 +15,6 @@
   </head>
   <body class="clearfix">
     <div class="clearfix" id="container">
-      <% if flash[:notice] %>
-        <div id="flash"><%= flash[:notice] %></div>
-      <% end %>
       <div class="clearfix" id="header">
         <% if current_user %>
           <ul class="summary">
@@ -38,6 +35,14 @@
         <% end %>
         <%= link_to image_tag('logo.png'), root_path, :class => "logo" %>
       </div>
+      <% if flash[:notice] %>
+        <div id="flash">
+          <a class="close_link" href="#">
+            <%= image_tag "close-flash.png" %>
+          </a>
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
       <div class="clearfix" id="content">
         <%= yield %>
       </div>
