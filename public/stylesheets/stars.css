@@ -7,7 +7,7 @@ aside .box {
   margin-bottom: 30px;
 }
 aside .box h2 {
-  background-color: #3f5e81;
+  background-color: rgba(0, 0, 0, .1);
   background-position: 12px 11px;
   background-repeat: no-repeat;
   font-size: 15px;
@@ -293,4 +293,7 @@ h2 {
 }
 #new_star_form .chzn-container-multi .chzn-choices .search-field input {
   font-family: "Droid serif";
+}
+#new_star_form .chzn-container .chzn-results .no-results {
+  background: none;
 }
