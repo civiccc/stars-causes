@@ -8,10 +8,6 @@ class StarsController < ApplicationController
     @last_weeks_superstars = Superstar.last_week
   end
 
-  def show
-    @star = Star.find(params[:id])
-  end
-
   def edit
     @star = Star.find(params[:id])
   end
