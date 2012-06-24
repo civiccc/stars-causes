@@ -1,6 +1,7 @@
 class StarsController < ApplicationController
   def index
     @stars = Star.recent(10)
+    @star = Star.new
     this_week = Date.today.beginning_of_week
     last_week = this_week - 1.week
     @current_superstars = Superstar.this_week
@@ -24,13 +25,10 @@ class StarsController < ApplicationController
 
   def create
     @star = Star.new(params[:star].merge(:from_id => current_user.id))
-
-    if @star.save
-      flash[:notice] = "You starred #{@star.to_sentence}!"
-      redirect_to root_path
-    else
-      render :action => "new"
+    if !@star.save
+      flash[:notice] = "To give a star, you need both a recipient and a reason."
     end
+    redirect_to :back
   end
 
   def update

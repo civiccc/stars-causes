@@ -2,7 +2,7 @@
 
 <aside>
   <div class="box">
-    <%= create_a_star_button %>
+    <%= render :partial => "/stars/new_star_form" %>
   </div>
   <% if @last_weeks_superstars.present? %>
     <div class="box" id="last_week">

@@ -11,6 +11,7 @@ Stars.Scene = (function($) {
       e.preventDefault();
       $("#flash").hide();
     })
+    $("#team_selector").chosen();
   };
   
   return {

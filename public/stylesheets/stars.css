@@ -81,6 +81,7 @@ h2 {
 }
 .star h2 {
   font-size: 35px;
+  line-height: 40px;
   margin: .25em 0;
 }
 .star .recipient {
@@ -263,4 +264,33 @@ h2 {
   color: #958e6b;
   float: right;
   margin-top: 8px;
+}
+
+#new_star_form {
+  background: rgba(0, 0, 0, .1);
+  padding: 20px;
+}
+#new_star_form textarea {
+  margin-bottom: 10px;
+  width: 240px;
+}
+#new_star_form select,
+#new_star_form ul {
+  margin-bottom: 10px;
+  width: 260px;
+}
+#new_star_form input[type=text],
+#new_star_form ul,
+#new_star_form textarea {
+  background: #134067;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#new_star_form textarea {
+  height: 50px;
+}
+#new_star_form .chzn-container-multi .chzn-choices .search-field input {
+  font-family: "Droid serif";
 }

@@ -1,0 +1,19 @@
+<% stylesheet 'chosen' %>
+
+<% form_for(@star, :html => {:class => 'clearfix',
+    :id => 'new_star_form'}) do |f| %>
+  <%= f.error_messages %>
+  <% if @user %>
+    <h2>Give a star to <%= @user.name %></h2>
+    <%= f.hidden_field 'to_ids' %>
+  <% else %>
+    <select multiple name="star[to_ids][]" id="team_selector"
+      data-placeholder="Select a team member...">
+      <% current_user.others.sort_by(&:name).each do |u| %>
+        <option value="<%= u.id %>"><%= u.name %></option>
+      <% end %>
+    </select>
+  <% end %>
+  <%= f.text_area :reason, :maxlength => 1024 %>
+  <%= f.submit 'Give Star', :class => 'button' %>
+<% end %>

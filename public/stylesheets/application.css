@@ -8,10 +8,16 @@ body {
   background-image: url('/images/night_bg.png');
   color: #333;  
 }
-body, input, textarea {
+body, input, select, textarea {
   font-family: 'Droid serif', serif;
 }
 
+input[type=text], textarea {
+  padding: 10px;
+}
+textarea {
+  font-size: 14px;
+}
 a {
   color: #fff;
   text-decoration: none;
@@ -195,4 +201,8 @@ html[xmlns] .clearfix {
 
 * html .clearfix {
   height: 1%;
+}
+
+.chzn-results {
+  background: #134760;
 }
