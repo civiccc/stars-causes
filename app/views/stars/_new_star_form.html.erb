@@ -14,6 +14,7 @@
       <% end %>
     </select>
   <% end %>
-  <%= f.text_area :reason, :maxlength => 1024 %>
+  <%= f.text_area :reason, :maxlength => 1024,
+    :placeholder => "What for?" %>
   <%= f.submit 'Give Star', :class => 'button' %>
 <% end %>

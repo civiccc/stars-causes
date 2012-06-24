@@ -6,7 +6,7 @@ aside {
 aside .box {
   margin-bottom: 30px;
 }
-aside .box h2 {
+aside .box > h2 {
   background-color: rgba(0, 0, 0, .1);
   background-position: 12px 11px;
   background-repeat: no-repeat;
@@ -288,6 +288,10 @@ h2 {
   color: #fff;
 }
 
+#new_star_form h2 {
+  font-size: 18px;
+  margin-bottom: .5em;
+}
 #new_star_form textarea {
   height: 50px;
 }

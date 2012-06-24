@@ -155,7 +155,9 @@ label {
   background-color: #f9f4db;
   padding: 15px;
 }
-
+.sheer a {
+  color: #3e9eaf;
+}
 .bordered {
   border: 1px solid rgba(255,255,255,.2);
 }
