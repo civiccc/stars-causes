@@ -42,7 +42,7 @@ class Star < ActiveRecord::Base
   end
 
   def value
-    1 + num_seconds/2.0
+    1 + num_seconds/10.0
   end
 
   after_create do |star|
