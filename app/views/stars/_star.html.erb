@@ -38,10 +38,10 @@
   <div class="new_comment">
        <% form_for(Comment.new(:star_id => star.id, :author_id => current_user.id)) do |f| %>
          <%= f.error_messages %>
-   <%= f.hidden_field :star_id %>
-   <%= f.hidden_field :author_id %>
+         <%= f.hidden_field :star_id %>
+         <%= f.hidden_field :author_id %>
          <p>
-           <%= f.text_field :body %>
+           <%= f.text_field :body, :placeholder => "Leave a comment..." %>
          </p>
        <% end %>
   </div>
