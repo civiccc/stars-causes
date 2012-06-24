@@ -107,6 +107,7 @@ h2 {
 }
 
 .superstars {
+  font-size: 14px;
   list-style-type: decimal;
   margin: 10px 0 40px 22px;
 }
@@ -117,6 +118,10 @@ h2 {
 
 .superstars .count {
   float: right;
+}
+.superstars .second,
+.superstars .star_count {
+  background-position: left center;
 }
 
 .superstars .info {
