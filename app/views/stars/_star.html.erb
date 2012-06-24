@@ -22,7 +22,7 @@
       <div class="seconds_count">
         <%= pluralize(star.seconds.size, "second") %>
       </div>
-      <%= star.seconds.map{|second| photo(second.user)} %>
+      <%= star.seconds.map{|second| photo(second.user)}.join %>
     </div>
   <% end %>
   <ul class="comments">
