@@ -20,11 +20,21 @@
       <% end %>
       <div class="clearfix" id="header">
         <% if current_user %>
-          <div class="summary">
+          <ul class="summary">
+            <li>
             <%= photo(current_user) %>
-            <%= current_user.stars_given.size %> given |
-            <%= current_user.stars.size %> received
-          </div>
+            </li>
+            <li>
+              <span class="star_count">
+                <%= current_user.stars_given.size %> given
+              </span>
+            </li>
+            <li>
+              <span class="star_count">
+                <%= current_user.stars.size %> received
+              </span>
+            </li>
+          </ul>
         <% end %>
         <%= link_to image_tag('logo.png'), root_path, :class => "logo" %>
       </div>

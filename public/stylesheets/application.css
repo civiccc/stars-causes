@@ -52,7 +52,8 @@ label {
   float: right;
   font-size: 12px;
   padding: 10px 15px;
-  background: rgba(0,0,0,0.15);
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 5px 5px;
 }
 #header .summary img {
   height: 30px;
@@ -60,9 +61,15 @@ label {
   vertical-align: middle;
   width: 30px;
 }
-
+#header .summary li {
+  display: inline-block;
+  margin-left: 8px;
+}
+#header .summary li:first-child {
+  margin-left: 0;
+}
 #content {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(4, 51, 103, 0.92);
   padding: 30px 30px 200px;
   margin: 0 auto;
   width: 960px;
