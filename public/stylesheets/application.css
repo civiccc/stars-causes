@@ -5,8 +5,10 @@
 
 body {
   background-attachment: fixed;
-  background-image: url('/images/stars-background.png');
-  color: #333;
+  background-image: url('/images/night_bg.png');
+  color: #333;  
+}
+body, input, textarea {
   font-family: 'Droid serif', serif;
 }
 
@@ -37,24 +39,36 @@ label {
 }
 
 #header {
-  margin: 40px 0 20px;
+  margin: 0 auto 40px;
+  width: 1020px;
+}
+#header .logo img {
+  display: block;
+  float: left;
+  margin-top: 20px;
 }
 #header .summary {
   color: #f9f4db;
   float: right;
+  font-size: 12px;
+  padding: 10px 15px;
+  background: rgba(0,0,0,0.15);
 }
 #header .summary img {
   height: 30px;
+  margin-right: 5px;
   vertical-align: middle;
   width: 30px;
 }
 
-#container {
-  background: rgba(32, 32, 30, 0.94);
+#content {
+  background: rgba(0, 0, 0, 0.1);
   padding: 30px 30px 200px;
   margin: 0 auto;
   width: 960px;
+  border-radius: 8px 8px 0 0;
 }
+
 #flash {
   background-color: #F80;
   border-bottom: 1px solid #000;
@@ -71,21 +85,12 @@ label {
   white-space: nowrap;
 }
 
-#top {
-  background-image: url('/images/top_banner.png');
-  top: 0px;
-  height: 22px;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-}
-
 #hills {
   background-image: url('/images/bottom_banner.png');
   background-color: transparent;
   bottom: 0;
   display: block;
-  height: 163px;
+  height: 142px;
   left: 0;
   position: fixed;
   width: 100%;
@@ -102,37 +107,25 @@ label {
 }
 
 .button {
-  background: #EEEEA3;
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEEEA3), to(#EE4));
-  background: -moz-linear-gradient(top, #EEEEA3, #EE4);
-  border: 1px solid #FFF;
-  color: #3B5998;
+  background: #59873f;
+  background: -webkit-gradient(linear, left top, left bottom, from(#90b85f), to(#59873f));
+  background: -moz-linear-gradient(top, #90b85f, #59873f);
+  border: none;
+  color: #fff;
   display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
   font-size: 20px;
   font-weight: bold;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  box-shadow: rgba(0,0,0,1) 0 1px 0;
-  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-  margin: 10px 5px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
   padding: 5px 12px 5px 10px;
-  text-shadow: none;
   vertical-align: middle;
 }
 
 .button:hover {
   cursor: pointer;
-  box-shadow: rgba(255,255,255,.75) 0 0px 10px;
-  -moz-box-shadow: rgba(255,255,255,.75) 0 0px 10px;
-  -webkit-box-shadow: rgba(255,255,255,.75) 0 0px 10px;
-}
-
-.button:active {
-  background: #CCCC83;
-  background: -webkit-gradient(linear, left top, left bottom, from(#CCCC83), to(#CC2));
-  background: -moz-linear-gradient(top, #CCCC83, #CC2);
 }
 
 .handwritten {
@@ -147,7 +140,7 @@ label {
 }
 
 .sheer {
-  background-color: #e7dba6;
+  background-color: #f9f4db;
   padding: 15px;
 }
 

@@ -1,18 +1,25 @@
 <% stylesheet 'stars' %>
 
-<div id="superstars">
-  <%= create_a_star_button %>
+<aside>
+  <div class="box">
+    <%= create_a_star_button %>
+  </div>
   <% if @last_weeks_superstars.any? %>
-    <h2>Last Week's Superstars</h2>
-    <%= render :partial => "superstars",
-               :locals => {:users => @last_weeks_superstars} %>
+    <div class="box" id="last_week">
+      <h2>Last Week's Superstars</h2>
+      <%= render :partial => "superstars",
+                 :locals => {:users => @last_weeks_superstars} %>
+    </div>
   <% end %>
   <% if @current_superstars.any? %>
-    <h2>This Week's Contenders</h2>
-    <%= render :partial => "superstars",
-               :locals => {:users => @current_superstars} %>
+    <div class="box" id="this_week">
+      <h2>This Week's Contenders</h2>
+      <%= render :partial => "superstars",
+                 :locals => {:users => @current_superstars} %>
+    </div>
   <% end %>
-</div>
+</aside>
+
 <ul id="recent_stars">
   <%= render :partial => 'star', :collection => @stars %>
 </ul>

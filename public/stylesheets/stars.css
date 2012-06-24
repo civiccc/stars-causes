@@ -1,5 +1,27 @@
-h2 {
-  font-size: 18px;
+aside {
+  color: #fff;
+  float: left;
+  width: 300px;
+}
+aside .box {
+  margin-bottom: 30px;
+}
+aside .box h2 {
+  background-color: #3f5e81;
+  background-position: 12px 11px;
+  background-repeat: no-repeat;
+  font-size: 15px;
+  letter-spacing: 0;
+  padding: 8px 16px 8px 34px;
+}
+#last_week h2 {
+  background-image: url('/images/last-week.png');  
+}
+#this_week h2 {
+  background-image: url('/images/this-week.png');
+}
+aside .box ol {
+  padding-left: 14px;
 }
 
 #recent_stars {
@@ -11,13 +33,7 @@ h2 {
 #recent_stars > li {
   padding: 30px;
   margin: 0 0 30px;
-  box-shadow: inset 0 0 0 10px #f9f4db;
-}
-
-#superstars {
-  color: #fff;
-  float: left;
-  width: 340px;
+  box-shadow: inset 0 0 0 10px #9faebd;
 }
 
 #recent_stars > .star {
@@ -59,8 +75,9 @@ h2 {
   width: 380px;
 }
 h2 {
-  font-family: 'Dancing Script', serif;
-  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 .star h2 {
   font-size: 35px;
@@ -190,11 +207,11 @@ h2 {
   margin: 0 5px;
 }
 .actions-and-seconds {
-  border-top: 1px solid #d4ca9d;
+  border-top: 1px solid #e4e1cd;
   padding: 16px 0;
 }
 .comments li {
-  border-top: 1px solid #d4ca9d;
+  border-top: 1px solid #e4e1cd;
 }
 .actions-and-seconds,
 .comments li {
@@ -220,12 +237,17 @@ h2 {
 
 #comment_body {
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, .2);
-  border: 1px solid #d4ca9d;
+  background-color: rgba(255, 255, 255, .3);
+  border: 1px solid #e4e1cd;
   padding: 10px;
   width: 540px;
 }
 
+.star_count {
+  background-image: url('/images/stars_icon.png');
+  background-repeat: no-repeat;
+  padding-left: 17px;  
+}
 .second {
   background-image: url('/images/second_icon.png');
   background-repeat: no-repeat;
