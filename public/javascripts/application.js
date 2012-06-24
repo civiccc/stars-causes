@@ -9,10 +9,16 @@ Stars.Scene = (function($) {
     $('a[data-remote]').live('ajax:complete', function(e, xhr, status) {
       if (xhr.responseText.trim().length > 0) {
         html = $(xhr.responseText);
-        id = $(this).data("append-id");
-        $('#' + id).append($(xhr.responseText));
-        var newPage = parseInt($(this).data("page")) + 1;
-        $(this).data("page", newPage);
+        console.log(html);
+        if ($(this).data("replace-id")) {
+          replaceId = $(this).data("replace-id");
+          $('#' + replaceId).replaceWith(html);
+        } else {
+          id = $(this).data("append-id");
+          $('#' + id).append(html);
+          var newPage = parseInt($(this).data("page")) + 1;
+          $(this).data("page", newPage);
+        }
       } else {
         $(this).hide();
       }

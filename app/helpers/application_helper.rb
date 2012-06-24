@@ -7,10 +7,10 @@ module ApplicationHelper
     link_to "&#9733; " + text, new_team_url, :class => 'button'
   end
 
-  def second_button(star, text="Second")
+  def second_button(star)
     if current_user.can_second?(star)
-      link_to text, star_seconds_url(star),
-        :method => :post, :class => "second"
+      link_to "Second", star_seconds_url(star), :class => "second",
+        'data-remote' => true, 'data-replace-id' => "star_#{star.id}"
     end
   end
 

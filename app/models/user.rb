@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   def can_second?(star)
     return false if [star.from, star.to].flatten.include?(self)
     return false if seconded?(star)
-    return true
+    true
   end
 
   def most_recent_star
@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   end
 
   def second(star)
-    Second.create(:star => star, :user => self) if can_second?(star)
+    star.seconds.create(:user => self) if can_second?(star)
   end
 
   def seconded?(star)
