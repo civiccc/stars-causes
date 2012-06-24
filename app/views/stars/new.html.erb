@@ -1,7 +1,6 @@
 <% stylesheet 'users/list' %>
 <%= javascript_include_tag 'users/list' %>
 <%= javascript_include_tag 'form' %>
-<%- @hide_create_star = true -%>
 
 <% form_for(@star, :html => {:class => 'sheer round clearfix'}) do |f| %>
   <%= f.error_messages %>
