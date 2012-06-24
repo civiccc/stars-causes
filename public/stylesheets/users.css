@@ -13,11 +13,3 @@ form textarea {
 form input.button {
   float: right;
 }
-
-form .chars_left {
-  display: block;
-  font-size: 12px;
-  margin: 5px 0px;
-  text-align: right;
-}
-

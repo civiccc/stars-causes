@@ -245,15 +245,11 @@ h2 {
   border-radius: 5px;
   background-color: rgba(255, 255, 255, .3);
   border: 1px solid #e4e1cd;
+  font-size: 12px;
   padding: 10px;
   width: 540px;
 }
 
-.star_count {
-  background-image: url('/images/stars_icon.png');
-  background-repeat: no-repeat;
-  padding-left: 17px;  
-}
 .second {
   background-image: url('/images/second_icon.png');
   background-repeat: no-repeat;

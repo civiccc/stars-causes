@@ -50,14 +50,27 @@ input[type=password],
 textarea {
   background: #134067;
   border: 1px solid #033467;
-  border-radius: 5px;
   color: #fff;
+  border-radius: 5px;
+}
+input[type=submit] {
+  vertical-align: baseline;
 }
 form p {
   margin-bottom: 1em;
 }
 form input, form textarea {
   margin-top: 5px;
+}
+form input[type=submit] {
+  margin-top: 0;
+}
+.submit_bar {
+  font-size: 12px;
+  margin-top: 2em;
+}
+.submit_bar input {
+  margin-right: 5px;
 }
 
 #header {
@@ -78,14 +91,16 @@ form input, form textarea {
   border-radius: 0 0 5px 5px;
 }
 #header .summary img {
+  vertical-align: middle;
+}
+#header .summary img.user_photo {
   height: 30px;
   margin-right: 5px;
-  vertical-align: middle;
   width: 30px;
 }
 #header .summary li {
   display: inline-block;
-  margin-left: 8px;
+  margin-left: 12px;
 }
 #header .summary li:first-child {
   margin-left: 0;
@@ -148,7 +163,7 @@ form input, form textarea {
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  padding: 5px 12px 5px 10px;
+  padding: 5px 20px;
   vertical-align: middle;
 }
 
@@ -217,4 +232,10 @@ html[xmlns] .clearfix {
 
 .chzn-results {
   background: #134760;
+}
+
+.star_count {
+  background-image: url('/images/stars_icon.png');
+  background-repeat: no-repeat;
+  padding-left: 17px;  
 }

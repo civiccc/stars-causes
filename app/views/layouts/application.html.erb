@@ -20,23 +20,21 @@
         <% if current_user %>
           <ul class="summary">
             <li>
-            <%= photo(current_user) %>
-            </li>
-            <li>
+              <%= photo(current_user) %>
               <span class="star_count">
                 <%= current_user.stars_given.size %> given
               </span>
-            </li>
-            <li>
               <span class="star_count">
                 <%= current_user.stars.size %> received
               </span>
             </li>
             <li>
-              <%= link_to "Manage", users_path %>
+              <%= link_to image_tag('manage.png'), users_path,
+                :title => 'Users' %>
             </li>
             <li>
-              <%= link_to "Sign out", logout_path %>
+              <%= link_to image_tag('sign-out.png'), logout_path,
+                :title => 'Sign Out' %>
             </li>
           </ul>
         <% end %>
