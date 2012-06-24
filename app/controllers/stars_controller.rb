@@ -12,13 +12,6 @@ class StarsController < ApplicationController
     @star = Star.find(params[:id])
   end
 
-  def new
-    @star = Star.new(params[:star])
-    if @star.to_ids.include?(current_user.id)
-      flash.now[:notice] = "You can't star yourself. How about someone else?"
-    end
-  end
-
   def edit
     @star = Star.find(params[:id])
   end
