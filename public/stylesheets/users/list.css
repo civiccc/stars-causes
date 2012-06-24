@@ -49,13 +49,6 @@ form ul.clearfix li.teamSelected {
   border: 2px solid #9F9;
   margin: 8px;
 }
-form ul.clearfix li .handwritten {
-  display: inline-block;
-  max-width: 85px;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
 form ul.clearfix li img {
   display: block;
   margin: 0px auto;

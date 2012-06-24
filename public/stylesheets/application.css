@@ -140,11 +140,6 @@ label {
   cursor: pointer;
 }
 
-.handwritten {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.5em;
-}
-
 .round {
   border-radius: 5px;
   -moz-border-radius: 5px;
