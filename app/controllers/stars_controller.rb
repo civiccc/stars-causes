@@ -1,11 +1,17 @@
 class StarsController < ApplicationController
   def index
-    @stars = Star.recent(10)
-    @star = Star.new
-    this_week = Date.today.beginning_of_week
-    last_week = this_week - 1.week
-    @current_superstars = Superstar.this_week
-    @last_weeks_superstars = Superstar.last_week
+    page_size = 10
+    if request.xhr?
+      page = request.headers['page']
+      @stars =
+        Star.recent(page_size).all(:offset => (page.to_i - 1) * page_size)
+      render :partial => "star", :collection => @stars
+    else
+      @stars = Star.recent(page_size)
+      @star = Star.new
+      @current_superstars = Superstar.this_week
+      @last_weeks_superstars = Superstar.last_week
+    end
   end
 
   def edit

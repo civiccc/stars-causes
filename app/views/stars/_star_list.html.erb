@@ -1,0 +1,5 @@
+<ul id="recent_stars">
+  <%= render :partial => '/stars/star', :collection => @stars %>
+</ul>
+<%= link_to "See More", stars_path(:page => (params[:page].to_i || 1) + 1),
+  'data-remote' => true, 'data-append_id' => 'recent_stars' %>

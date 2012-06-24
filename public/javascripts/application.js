@@ -1,6 +1,24 @@
 if (typeof (Stars) === 'undefined') {Stars = {}};
 
 Stars.Scene = (function($) {
+  var initPaging = function() {
+    $('a[data-remote]').live('ajax:beforeSend', function(e, xhr, status) {
+      xhr.setRequestHeader("page", $(this).data("page"));
+    });
+
+    $('a[data-remote]').live('ajax:complete', function(e, xhr, status) {
+      if (xhr.responseText.trim().length > 0) {
+        html = $(xhr.responseText);
+        id = $(this).data("append-id");
+        $('#' + id).append($(xhr.responseText));
+        var newPage = parseInt($(this).data("page")) + 1;
+        $(this).data("page", newPage);
+      } else {
+        $(this).hide();
+      }
+    });
+  };
+
   var init = function() {
     $("#stars, #logo").scrollingParallax({
       bgHeight: '100%',
@@ -12,8 +30,9 @@ Stars.Scene = (function($) {
       $("#flash").hide();
     })
     $("#team_selector").chosen();
+    initPaging();
   };
-  
+
   return {
     init: init
   };

@@ -24,6 +24,12 @@
   <% end %>
 </aside>
 
-<ul id="recent_stars">
-  <%= render :partial => '/stars/star', :collection => @stars %>
-</ul>
+<section>
+  <ul id="recent_stars">
+    <%= render :partial => '/stars/star', :collection => @stars %>
+  </ul>
+
+  <%= link_to "See More", stars_path, 'data-page' => 2,
+    'data-remote' => true, 'data-append-id' => 'recent_stars',
+    :class => "see_more round" %>
+</section>

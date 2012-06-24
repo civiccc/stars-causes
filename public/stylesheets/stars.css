@@ -25,7 +25,7 @@ aside .box ol {
   padding-left: 14px;
 }
 
-#recent_stars {
+section {
   float: right;
   margin: 0;
   width: 620px;
@@ -38,6 +38,13 @@ aside .box ol {
 
 #recent_stars > .star {
   position: relative;
+}
+
+.see_more {
+  background: #022d5b;
+  display: block;
+  padding: 10px 0;
+  text-align: center;
 }
 
 .star .photos .star {
