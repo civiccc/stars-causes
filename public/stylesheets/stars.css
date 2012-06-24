@@ -12,6 +12,7 @@ aside .box > h2 {
   background-repeat: no-repeat;
   font-size: 15px;
   letter-spacing: 0;
+  margin: 0;
   padding: 8px 16px 8px 34px;
 }
 #last_week h2 {
@@ -290,7 +291,6 @@ h2 {
 
 #new_star_form h2 {
   font-size: 18px;
-  margin-bottom: .5em;
 }
 #new_star_form textarea {
   height: 50px;
