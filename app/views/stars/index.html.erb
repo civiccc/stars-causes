@@ -4,14 +4,14 @@
   <div class="box">
     <%= create_a_star_button %>
   </div>
-  <% if @last_weeks_superstars.any? %>
+  <% if @last_weeks_superstars.present? %>
     <div class="box" id="last_week">
       <h2>Last Week's Superstars</h2>
       <%= render :partial => "superstars",
                  :locals => {:users => @last_weeks_superstars} %>
     </div>
   <% end %>
-  <% if @current_superstars.any? %>
+  <% if @current_superstars.present? %>
     <div class="box" id="this_week">
       <h2>This Week's Contenders</h2>
       <%= render :partial => "superstars",
@@ -21,5 +21,5 @@
 </aside>
 
 <ul id="recent_stars">
-  <%= render :partial => 'star', :collection => @stars %>
+  <%= render :partial => '/stars/star', :collection => @stars %>
 </ul>

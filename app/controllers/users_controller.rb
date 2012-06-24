@@ -25,6 +25,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @star = Star.new(:to => [@user])
+    @stars = @user.stars
+    render :template => "/stars/index"
   end
 
   def update
