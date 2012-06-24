@@ -9,7 +9,6 @@ Stars.Scene = (function($) {
     $('a[data-remote]').live('ajax:complete', function(e, xhr, status) {
       if (xhr.responseText.trim().length > 0) {
         html = $(xhr.responseText);
-        console.log(html);
         if ($(this).data("replace-id")) {
           replaceId = $(this).data("replace-id");
           $('#' + replaceId).replaceWith(html);

@@ -11,7 +11,7 @@
       <div class="time">
         Awarded by <%= star.from.name %> on 
         <%= friendly_time(star.created_at) %> &nbsp;
-        <% if star.seconds.empty? %>
+        <% if current_user.can_second?(star) %>
           <%= second_button(star) %>
         <% end %>
       </div>
