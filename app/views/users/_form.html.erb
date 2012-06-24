@@ -1,22 +1,22 @@
 <% form_for @user do |f| %>
   <p>
-    <%= f.label :name %>
+    <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :email %>
+    <%= f.label :email %><br />
     <%= f.text_field :email %>
   </p>
   <p>
-    <%= f.label :password %>
+    <%= f.label :password %><br />
     <%= f.password_field :password %>
   </p>
   <p>
-    <%= f.label :password_confirmation %>
+    <%= f.label :password_confirmation, "Confirm password" %><br />
     <%= f.password_field :password_confirmation %>
   </p>
   <p>
-    <%= f.label :facebook_uid %>
+    <%= f.label :facebook_uid, "Facebook ID" %><br />
     <%= f.text_field :facebook_uid %>
   </p>
   <%- unless @user.new_record? -%>
@@ -26,7 +26,7 @@
     </p>
   <%- end -%>
   <p>
-    <%= f.submit %>
+    <%= f.submit "Save Changes", :class => "button small" %> or
+    <%= link_to "Cancel", users_path %>
   </p>
 <% end %>
-

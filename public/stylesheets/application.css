@@ -6,17 +6,13 @@
 body {
   background-attachment: fixed;
   background-image: url('/images/night_bg.png');
-  color: #333;  
+  color: #fff;  
 }
 body, input, select, textarea {
   font-family: 'Droid serif', serif;
 }
-
-input[type=text], textarea {
-  padding: 10px;
-}
-textarea {
-  font-size: 14px;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open sans', sans-serif;
 }
 a {
   color: #fff;
@@ -42,6 +38,25 @@ table td {
 
 label {
   cursor: pointer;
+}
+
+input[type=text], input[type=password], textarea {
+  font-size: 14px;
+  padding: 10px;
+}
+input[type=text],
+input[type=password],
+textarea {
+  background: #134067;
+  border: 1px solid #033467;
+  border-radius: 5px;
+  color: #fff;
+}
+form p {
+  margin-bottom: 1em;
+}
+form input, form textarea {
+  margin-top: 5px;
 }
 
 #header {
@@ -136,6 +151,10 @@ label {
   vertical-align: middle;
 }
 
+.button.small {
+  font-size: 14px;
+}
+
 .button:hover {
   cursor: pointer;
 }
@@ -148,6 +167,7 @@ label {
 
 .sheer {
   background-color: #f9f4db;
+  color: #333;
   padding: 15px;
 }
 .sheer a {
@@ -166,12 +186,6 @@ label {
 
 .small {
   font-size: .8em;
-}
-
-.lone_message {
-  margin: 150px auto;
-  text-align: center;
-  width: 400px;
 }
 
 .time {

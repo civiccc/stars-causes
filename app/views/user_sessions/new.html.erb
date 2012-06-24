@@ -1,14 +1,14 @@
 <% stylesheet 'user_sessions' %>
 
-<div class="lone_message sheer round clearfix" %>
+<div class="round clearfix" %>
   <h2>Star light, star bright&hellip;</h2>
   <%- form_for @user_session do |f| -%>
     <p>
-      <%= f.label :email %>
+      <%= f.label :email %><br />
       <%= f.text_field :email %>
     </p>
     <p>
-      <%= f.label :password %>
+      <%= f.label :password %><br />
       <%= f.password_field :password %>
     </p>
     <p class="remember">

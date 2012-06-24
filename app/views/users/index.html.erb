@@ -1,6 +1,12 @@
-<div class="sheer round">
-  <p>Active Users</p>
-  <%= render :partial => 'list', :locals => {:users => User.active.all} %>
-  <p>Inactive Users</p>
-  <%= render :partial => 'list', :locals => {:users => User.inactive.all} %>
+<% stylesheet 'users/index' %>
+<div class="round">
+  <h2>Team Members</h2>
+  <% if @active_users.any? %>
+    <%= render :partial => 'list', :locals => {:users => @active_users} %>
+  <% end %>
+  <%= link_to "Add Team Member", new_user_path, :class => "button small" %>
+  <% if @inactive_users.any? %>
+    <p>Inactive Users</p>
+    <%= render :partial => 'list', :locals => {:users => @inactive_users} %>
+  <% end %>
 </div>

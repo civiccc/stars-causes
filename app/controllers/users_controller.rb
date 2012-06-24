@@ -15,7 +15,8 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.all.sort_by(&:name)
+    @active_users = User.active.all
+    @inactive_users = User.inactive.all
   end
 
   def new
