@@ -4,6 +4,6 @@
       <span class="star_count"><%= superstar.num_stars %></span>
       <span class="second"><%= superstar.num_seconds %></span>
     </div>
-    <%= superstar.user.name %>
+    <%= link_to superstar.user.name, user_path(superstar.user) %>
   </div>
 </li>
