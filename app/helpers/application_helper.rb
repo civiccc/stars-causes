@@ -25,7 +25,7 @@ module ApplicationHelper
       "#{type}.png"
     end
     link_to(image_tag(image_url, :height => PHOTO_SIZE, :width => PHOTO_SIZE,
-                      :class => "user_photo"),
+                      :class => "user_photo", :alt => ""),
             send("#{type}_path", subject))
   end
 

@@ -14,3 +14,5 @@ config.action_view.debug_rjs                         = true
 config.action_controller.perform_caching             = false
 
 config.action_mailer.delivery_method = :test
+
+config.action_controller.asset_host = "http://#{ENV['APP_HOST'] || ''}"

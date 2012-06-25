@@ -3,10 +3,13 @@
        style="background-color: #0d4f8f;
               color: #FFF;
               margin: 20px auto 40px;
-              padding: 10px 30px 20px;
+              padding: 20px 30px;
               width: 448px;">
-    <h1 style="color: #fff">
-      <%= @star.from.name %> gave <%= @star.to_sentence %> a star!
+    <%= image_tag @star.image_path, :style => "vertical-align: middle",
+      :alt => "" %>
+    <h1 style="color: #fff; margin-top: 0">
+      <%= @star.from.name %> gave <%= @star.to_sentence %>
+      a <%= @star.name %>!
     </h1>
     <div style="border: 5px solid #FFF;
               background-color: #f9f4d8;
@@ -42,7 +45,7 @@
         </div>
       </div>
     </div>
-    <%= link_to "&#9733; View Star", star_url(@star),
+    <%= link_to "View Star", star_url(@star),
                 :style => "
                   color: #f6f400;
                   font-size: 12px;
