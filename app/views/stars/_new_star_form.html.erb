@@ -21,7 +21,7 @@
 
   <div class="round clearfix" id="selected_star">
     <%= image_tag(@star.image_path, :id => 'selected_star_image') %>
-    <span id="selected_star_title"><%= @star.full_name %></span>
+    <span id="selected_star_title"><%= @star.name %></span>
   </div>
   <%= f.submit 'Give Star', :class => 'small button' %>
 <% end %>

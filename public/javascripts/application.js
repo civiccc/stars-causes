@@ -32,7 +32,7 @@ Stars.Scene = (function($) {
   };
 
   var initStarChooser = function() {
-    $("#star_chooser").dialog({width: 580, autoOpen: false, closeText: ''});
+    $("#star_chooser").dialog({width: 640, autoOpen: false, closeText: ''});
     $("#selected_star").click(function() {
       $("#star_chooser").dialog('open');
     });
