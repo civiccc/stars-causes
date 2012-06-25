@@ -9,3 +9,4 @@ config/facebooker.yml
 config/initializers/hoptoad.rb
 db/schema.rb
 db/*.sqlite3 
+tmtags
