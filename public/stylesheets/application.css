@@ -97,7 +97,7 @@ form input[type=submit] {
   float: right;
   font-size: 12px;
   padding: 10px 15px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(2, 45, 91, .9);
   border-radius: 0 0 5px 5px;
 }
 #header .summary img {
@@ -116,7 +116,7 @@ form input[type=submit] {
   margin-left: 0;
 }
 #content {
-  background: rgba(4, 51, 103, 0.92);
+  background: rgba(2, 45, 91, .95);
   padding: 30px 30px 200px;
   margin: 0 auto;
   width: 960px;
