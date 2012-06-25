@@ -14,6 +14,10 @@ class StarsController < ApplicationController
     end
   end
 
+  def show
+    @star = Star.find(params[:id])
+  end
+
   def edit
     @star = Star.find(params[:id])
   end
