@@ -5,7 +5,7 @@
       <%= image_tag star.image_path %>
     </div>
     <div class="recipient">
-      <%= star.to.map{|u| photo(u)}.join %>
+      <%= star.to.map{|u| background_photo(u)}.join %>
     </div>
     <div class="info">
       <h2><%= star.to.map(&:name).to_sentence %> got a

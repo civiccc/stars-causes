@@ -15,18 +15,20 @@ module ApplicationHelper
          sub('PM', 'pm')
   end
 
-  PHOTO_SIZE = 50
-  def photo(subject)
-    type = subject.class.name.downcase
-    image_url = case type
-    when 'user'
-      "http://graph.facebook.com/#{subject.facebook_uid.to_i}/picture?type=normal"
-    else
-      "#{type}.png"
-    end
-    link_to(image_tag(image_url, :height => PHOTO_SIZE, :width => PHOTO_SIZE,
-                      :class => "user_photo", :alt => ""),
-            send("#{type}_path", subject))
+  def photo(user)
+    image_url =
+      "http://graph.facebook.com/#{user.facebook_uid.to_i}/picture?type=square"
+    link_to image_tag(image_url, :class => "user_photo", :alt => ""),
+      user_path(user)
+  end
+
+  def background_photo(user)
+    image_url =
+      "http://graph.facebook.com/#{user.facebook_uid.to_i}/picture?type=large"
+    div = content_tag(:div, "", :class => "user_photo", :style =>
+      "background-image: url('#{image_url}');
+       background-position: center; background-size: cover")
+    link_to div, user_path(user)
   end
 
   def stylesheet(path)

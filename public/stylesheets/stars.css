@@ -109,7 +109,7 @@ h2 {
   width: 150px;
   margin-right: 20px;
 }
-.star .recipient img {
+.star .recipient .user_photo {
   height: 150px;
   width: 150px;
 }
@@ -117,7 +117,7 @@ h2 {
   margin-right: 10px;
   width: 160px;
 }
-.multi.star .recipient img {
+.multi.star .recipient .user_photo {
   float: left;
   height: 72px;
   margin: 0 6px 6px 0;
@@ -252,7 +252,7 @@ h2 {
 .comments li img {
   float: left;
   height: 30px;
-  margin-right: 8px;
+  margin-right: 5px;
   width: 30px;
 }
 .comments li .body {
