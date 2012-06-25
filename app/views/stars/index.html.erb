@@ -5,9 +5,11 @@
 <% end %>
 
 <aside>
-  <div class="box">
-    <%= render :partial => "/stars/new_star_form" %>
-  </div>
+  <% if !@user || (@user != current_user) %>
+    <div class="box">
+      <%= render :partial => "/stars/new_star_form" %>
+    </div>
+  <% end %>
   <% if @last_weeks_superstars.present? %>
     <div class="box" id="last_week">
       <h2>Last Week's Superstars</h2>
