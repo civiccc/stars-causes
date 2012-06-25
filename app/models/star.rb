@@ -23,8 +23,8 @@ class Star < ActiveRecord::Base
   # note that this is not "to_sentence" as in "convert star to sentence"
   # but is instead "the sentence representing :to"
   def to_sentence
-    names = to.map {|u| u.name }
-	names.to_sentence
+    names = to.map {|u| u.name}
+  	names.to_sentence
   end
 
   def self.past_week_by_user
