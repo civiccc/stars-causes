@@ -15,8 +15,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @active_users = User.active.all
-    @inactive_users = User.inactive.all
+    @active_users = User.active.all(:order => 'name')
   end
 
   def new
