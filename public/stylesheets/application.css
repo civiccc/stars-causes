@@ -249,3 +249,34 @@ html[xmlns] .clearfix {
   background-repeat: no-repeat;
   padding-left: 17px;  
 }
+
+.ui-dialog {
+  background: #f9f4dd;
+  border-radius: 10px;
+  box-shadow: 0 0 0 10px rgba(0, 0, 0, .2);
+  padding: 20px;
+}
+.ui-dialog,
+.ui-dialog a {
+  color: #333;
+}
+.ui-dialog .button {
+  color: #fff;
+}
+.ui-dialog .ui-dialog-titlebar {
+  border-bottom: 1px solid #ddd;
+  font-family: 'Open sans', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  padding-bottom: 6px;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+  background-image: url('/images/close-button.png');
+  height: 42px;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  width: 42px;
+}

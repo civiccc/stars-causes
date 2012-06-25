@@ -52,7 +52,7 @@ section {
   height: 30px;
 }
 .see_more {
-  background: #022d5b;
+  background: #134067;
   display: block;
   font-size: 14px;
   padding: 14px 0;
@@ -321,4 +321,52 @@ h2 {
 }
 #new_star_form .chzn-container .chzn-results .no-results {
   background: none;
+}
+#new_star_form #selected_star {
+  background-color: #134067;
+  background-image: url('/images/dropdown.png');
+  background-position: right center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Open sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+  padding: 4px 6px;
+}
+#new_star_form #selected_star:hover {
+  background-color: #2995aa;
+}
+#new_star_form * {
+  vertical-align: middle;
+}
+#new_star_form #selected_star_image {
+  height: 40px;
+  margin-right: 2px;
+  width: 40px;
+}
+#star_chooser ul {
+  font-size: 12px;
+  margin-bottom: 1em;
+}
+#star_chooser li {  
+  float: left;
+  text-align: center;
+  margin: 0 25px 20px 5px;
+}
+#star_chooser .star_image_container {
+  background: #3e5e7e;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 60px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 5px #decd8b;
+}
+#star_chooser .star_image_container.selected {
+  background: #2395a7;
+}
+#star_chooser input[type=radio] {
+  display: none;
 }

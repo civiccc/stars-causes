@@ -52,7 +52,11 @@ class Star < ActiveRecord::Base
   end
 
   def name
-    self.star_type == 'standard' ? 'star' : STAR_TYPES[self.star_type]['title']
+    self.star_type == 'standard' ? 'star' : self.full_name
+  end
+
+  def full_name
+    STAR_TYPES[self.star_type]['title']
   end
 
   after_create do |star|

@@ -8,7 +8,7 @@ class StarsController < ApplicationController
       render :partial => "star", :collection => @stars
     else
       @stars = Star.recent(page_size)
-      @star = Star.new
+      @star = Star.new(:star_type => 'standard')
       @current_superstars = Superstar.this_week
       @last_weeks_superstars = Superstar.last_week
     end
