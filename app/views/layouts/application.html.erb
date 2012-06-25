@@ -29,11 +29,11 @@
                 <%= current_user.stars.size %> received
               </span>
             </li>
-            <li>
+            <li class="utility_link">
               <%= link_to image_tag('manage.png'), users_path,
                 :title => 'Users' %>
             </li>
-            <li>
+            <li class="utility_link">
               <%= link_to image_tag('sign-out.png'), logout_path,
                 :title => 'Sign Out' %>
             </li>

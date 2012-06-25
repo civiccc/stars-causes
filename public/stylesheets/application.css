@@ -105,6 +105,12 @@ form input[type=submit] {
 #header .summary img {
   vertical-align: middle;
 }
+#header .summary .utility_link {
+  opacity: .5;
+}
+#header .summary .utility_link:hover {
+  opacity: 1;
+}
 #header .summary img.user_photo {
   height: 30px;
   margin-right: 5px;
