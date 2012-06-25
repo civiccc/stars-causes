@@ -16,5 +16,10 @@
   <% end %>
   <%= f.text_area :reason, :maxlength => 1024,
     :placeholder => "What for?" %>
+  <select name="star[star_type]">
+    <% Star::STAR_TYPES.map do |type, values| %>
+      <option value="<%= type %>"><%= values['title'] %></option>
+    <% end %>
+  </select>
   <%= f.submit 'Give Star', :class => 'button' %>
 <% end %>

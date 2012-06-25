@@ -1,10 +1,15 @@
-<li class="star sheer round clearfix" id="star_<%= star.id %>">
+<li class="star sheer round clearfix<%= ' multi' if star.to.size > 1 %>" 
+    id="star_<%= star.id %>">
   <div class="primary_content clearfix">
-    <div class="recipient<%= ' multi' if star.to.size > 1 %>">
+    <div class="star_image round">
+      <%= image_tag star.image_path %>
+    </div>
+    <div class="recipient">
       <%= star.to.map{|u| photo(u)}.join %>
     </div>
     <div class="info">
-      <h2><%= star.to.map(&:name).to_sentence %> got a star</h2>
+      <h2><%= star.to.map(&:name).to_sentence %> got a
+        <%= star.name %></h2>
       <div class="reason">
         <%= star.reason %>
       </div>

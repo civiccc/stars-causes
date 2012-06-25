@@ -1,0 +1,39 @@
+standard:
+  title: Standard Star
+  description: For a job well done
+pipeline:
+  title: Pipeline Star
+  description: For those who are building a pipeline
+pairing:
+  title: Pairing Star
+  description: Way to pair!
+bugkiller:
+  title: Bugkiller Star
+  description: Smash those bugs!
+creative:
+  title: Creative Star
+  description: So creative
+cleaning:
+  title: Cleaning Star
+  description: Cleaning stuff
+money:
+  title: Money Star
+  description: Bling bling
+zombie:
+  title: Zombie Star
+  description: For behavior worthy of the undead
+speaking:
+  title: Speaking Star
+  description: For excellence in speaking
+shipping:
+  title: Shipping Star
+  description: Just shipping
+resume:
+  title: Resume Star
+  description: Reviewing resumes
+support:
+  title: Support Star
+  description: For exemplary support
+teambuilding:
+  title: Teambuilding Star
+  description: For building team

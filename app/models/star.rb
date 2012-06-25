@@ -45,6 +45,16 @@ class Star < ActiveRecord::Base
     1 + num_seconds/10.0
   end
 
+  STAR_TYPES = YAML.load_file("config/stars.yml")
+
+  def image_path
+    "/images/star-types/#{self.star_type}.png"
+  end
+
+  def name
+    self.star_type == 'standard' ? 'star' : STAR_TYPES[self.star_type]['title']
+  end
+
   after_create do |star|
     Mailer.deliver_star(star)
   end

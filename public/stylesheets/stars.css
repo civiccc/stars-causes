@@ -40,6 +40,17 @@ section {
   position: relative;
 }
 
+.star_image {
+  left: 10px;
+  position: absolute;
+  top: 10px;
+  background: #fff;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, .1);
+}
+.multi .star_image img {
+  width: 30px;
+  height: 30px;
+}
 .see_more {
   background: #022d5b;
   display: block;
@@ -89,7 +100,7 @@ h2 {
 }
 .star h2 {
   font-size: 35px;
-  line-height: 42px;
+  line-height: 40px;
   margin: .1em 0 .4em;
 }
 .star .recipient {
@@ -102,15 +113,15 @@ h2 {
   height: 150px;
   width: 150px;
 }
-.star .recipient.multi img {
-  float: left;
-  height: 70px;
-  margin: 0 10px 10px 0;
-  width: 70px;
-}
-.star .recipient.multi {
+.multi.star .recipient {
   margin-right: 10px;
   width: 160px;
+}
+.multi.star .recipient img {
+  float: left;
+  height: 72px;
+  margin: 0 6px 6px 0;
+  width: 72px;
 }
 .star .reason {
   line-height: 22px;
