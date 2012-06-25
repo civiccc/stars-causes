@@ -11,6 +11,14 @@ class Mailer < ActionMailer::Base
     body :star => star
   end
 
+  def comment(comment)
+    star = comment.star
+    subject "#{star.to_sentence} got a star!"
+    recipients star.to.map(&:email)
+    from FROM
+    body :comment => comment
+  end
+
   def report
     superstars = Superstar.last_week
     num_stars = superstars.map(&:num_stars).sum
