@@ -1,35 +1,53 @@
 <body style="text-align: center;">
   <div id="content"
-       style="background-color: #004276;
+       style="background-color: #0d4f8f;
               color: #FFF;
-              margin: 20px auto 0px;
-              padding: 10px 10px 20px;
-              width: 600px;">
-    <h1>
+              margin: 20px auto 40px;
+              padding: 10px 30px 20px;
+              width: 448px;">
+    <h1 style="color: #fff">
       <%= @star.from.name %> gave <%= @star.to_sentence %> a star!
     </h1>
-    <p style="border: 2px solid #FFF;
-              background-color: #4C6C85;
-              color: #FFF;
+    <div style="border: 5px solid #FFF;
+              background-color: #f9f4d8;
+              color: #333;
               font-size: 14px;
+              line-height: 18px;
+              font-family: Georgia, serif;
               margin: 20px auto;
               padding: 20px;
+              text-align: left;
               width: 400px;">
-      <%= @star.reason %>
-    </p>
+      <div style="float: left; margin-right: 20px; width: 50px;">
+        <%= photo(@star.to.first) %>
+      </div>
+      <div style="margin-left: 70px">
+        <%= @star.reason %><br />
+        <br />
+        <%= link_to "Second", star_seconds_url(@star),
+                    :style => "
+                      color: #2995ad;
+                      font-size: 12px;
+                      font-family: Helvetica, sans-serif;
+                      font-weight: bold;
+                    text-decoration: none" %>
+        <span style="color: #888; margin: 0 5px">|</span>
+        <%= link_to "Comment", star_url(@star),
+                    :style => "
+                      color: #2995ad;
+                      font-size: 12px;
+                      font-family: Helvetica, sans-serif;
+                      font-weight: bold;
+                    text-decoration: none" %>
+      </div>
+    </div>
+    <%= link_to "&#9733; View Star", star_url(@star),
+                :style => "
+                  color: #f6f400;
+                  font-size: 12px;
+                  font-weight: bold;
+                  padding: 5px 10px;
+                  text-decoration: none;
+                  text-transform: uppercase" %>
   </div>
-  <p style="margin: 10px 0px;">
-    <%= link_to "&#9733; See stars", root_url,
-                :style => "
-                  background-color: #EE4;
-                  color: #3B5998;
-                  font-size: 16px;
-                  padding: 5px 10px;" %>
-    <%= link_to "&#9732; Second!", star_seconds_url(@star),
-                :style => "
-                  background-color: #387733;
-                  color: #FFF;
-                  font-size: 16px;
-                padding: 5px 10px;" %>
-  </p>
 </body>
