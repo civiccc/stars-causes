@@ -10,7 +10,8 @@ module ApplicationHelper
   def second_button(star)
     if current_user.can_second?(star)
       link_to "Second", star_seconds_url(star), :class => "second",
-        'data-remote' => true, 'data-replace-id' => "star_#{star.id}"
+        'data-remote' => true, 'data-replace-id' => "star_#{star.id}",
+        'data-method' => 'post'
     end
   end
 
