@@ -14,7 +14,7 @@ class Mailer < ActionMailer::Base
   def comment(comment)
     star = comment.star
     subject "#{star.to_sentence} got a star!"
-    recipients star.to.map(&:email)
+    recipients (star.to - [comment.author]).map(&:email)
     from FROM
     body :comment => comment
   end
