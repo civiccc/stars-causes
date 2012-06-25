@@ -364,7 +364,7 @@ h2 {
   border-radius: 10px;
   box-shadow: 0 0 0 5px #decd8b;
 }
-#star_chooser .star_image_container.selected {
+#star_chooser .star_image_container:hover {
   background: #2395a7;
 }
 #star_chooser input[type=radio] {

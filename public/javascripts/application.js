@@ -32,17 +32,12 @@ Stars.Scene = (function($) {
     $(".star_image_container").click(function() {
       $(".star_image_container.selected").removeClass("selected");
       var id = $(this).data("label");
-      $(this).addClass("selected");
-      $("#" + id).attr("checked", true);
-    });
-    $("#confirm_star_selection").click(function(e) {
-      e.preventDefault();
-      var input = $("input:checked[name=star_type]");
+      var input = $("#" + id);
       $("#selected_star_title").html(input.data('title'));
       $("#selected_star_image").attr("src", input.data('image-path'));
       $("#star_star_type").val(input.val());
       $("#star_chooser").dialog('close');
-    })
+    });
   };
 
   var init = function() {
