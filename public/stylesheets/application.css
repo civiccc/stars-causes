@@ -76,7 +76,9 @@ form input[type=submit] {
   border-radius: 3px;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, .25);
 }
-
+#container {
+  position: relative;
+}
 #header {
   margin: 0 auto 20px;
   width: 1020px;
@@ -142,10 +144,9 @@ form input[type=submit] {
   background-image: url('/images/bottom_banner.png');
   background-color: transparent;
   bottom: 0;
-  display: block;
   height: 142px;
   left: 0;
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 1000;
 }
