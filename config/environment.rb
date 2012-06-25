@@ -16,3 +16,5 @@ ActionView::Helpers::AssetTagHelper.
   'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js',
   'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js'
 ]
+
+config.action_controller.asset_host = "http://#{ENV['APP_HOST']}"
