@@ -45,6 +45,10 @@ class CommentsController < ApplicationController
       if @comment.save
         format.html { redirect_to(:back) }
         format.xml  { render :xml => @comment, :status => :created, :location => @comment }
+        format.js {
+          @comment.reload
+          render :partial => "/stars/star", :locals => {:star => @comment.star}
+        }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }

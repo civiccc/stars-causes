@@ -22,6 +22,13 @@ Stars.Scene = (function($) {
         $(this).hide();
       }
     });
+
+    $('form[data-remote]').live('ajax:complete', function(e, xhr, status) {
+      if ($(this).data("replace-id")) {
+        replaceId = $(this).data("replace-id");
+        $('#' + replaceId).replaceWith(xhr.responseText);
+      }
+    });
   };
 
   var initStarChooser = function() {
