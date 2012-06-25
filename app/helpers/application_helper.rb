@@ -1,8 +1,4 @@
 module ApplicationHelper
-  def create_a_team_button(text="Make a new team")
-    link_to "&#9733; " + text, new_team_url, :class => 'button'
-  end
-
   def second_button(star)
     if current_user.can_second?(star)
       link_to "Second", star_seconds_url(star), :class => "second",

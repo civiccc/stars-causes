@@ -1,4 +1,4 @@
-ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.delivery_method = :test
 ActionMailer::Base.perform_deliveries = :true
 ActionMailer::Base.smtp_settings = {
   :enable_starttls_auto => true,

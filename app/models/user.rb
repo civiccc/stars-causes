@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
   acts_as_authentic
 
   has_and_belongs_to_many :stars
-  has_and_belongs_to_many :teams
 
   has_many :stars_given, :class_name => 'Star', :foreign_key => :from_id
 

@@ -43,7 +43,8 @@ section {
 .see_more {
   background: #022d5b;
   display: block;
-  padding: 10px 0;
+  font-size: 14px;
+  padding: 14px 0;
   text-align: center;
 }
 
@@ -214,10 +215,6 @@ h2 {
   width: .5em;
 }
 
-#teams .photo {
-  display: inline-block;
-  margin: 0 5px;
-}
 .actions-and-seconds {
   border-top: 1px solid #e4e1cd;
   padding: 16px 0;
