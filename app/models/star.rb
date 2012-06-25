@@ -47,6 +47,12 @@ class Star < ActiveRecord::Base
 
   STAR_TYPES = YAML.load_file("config/stars.yml")
 
+  def self.sorted_star_types
+    STAR_TYPES.sort_by do |star_type, properties|
+      properties["order"]
+    end
+  end
+
   def image_path
     "/images/star-types/#{self.star_type}.png"
   end

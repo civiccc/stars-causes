@@ -1,39 +1,52 @@
 standard:
   title: Standard Star
   description: For a job well done
+  order: 1
 pipeline:
   title: Pipeline Star
   description: For those who are building a pipeline
+  order: 2
 pairing:
   title: Pairing Star
   description: Way to pair!
+  order: 2
 bugkiller:
   title: Bugkiller Star
   description: Smash those bugs!
+  order: 2
 creative:
   title: Creative Star
   description: So creative
+  order: 2
 cleaning:
   title: Cleaning Star
   description: Cleaning stuff
+  order: 2
 money:
   title: Money Star
   description: Bling bling
+  order: 2
 zombie:
   title: Zombie Star
   description: For behavior worthy of the undead
+  order: 3
 speaking:
   title: Speaking Star
   description: For excellence in speaking
+  order: 2
 shipping:
   title: Shipping Star
   description: Just shipping
+  order: 2
 resume:
   title: Resume Star
   description: Reviewing resumes
+  order: 2
 support:
   title: Support Star
   description: For exemplary support
+  order: 2
 teambuilding:
   title: Teambuilding Star
   description: For building team
+  order: 2

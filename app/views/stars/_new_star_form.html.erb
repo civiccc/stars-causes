@@ -23,12 +23,12 @@
     <%= image_tag(@star.image_path, :id => 'selected_star_image') %>
     <span id="selected_star_title"><%= @star.full_name %></span>
   </div>
-  <%= f.submit 'Give Star', :class => 'button' %>
+  <%= f.submit 'Give Star', :class => 'small button' %>
 <% end %>
 
-<div id="star_chooser" title="Select a star">
+<div id="star_chooser" title="Choose a star">
   <ul class="clearfix">
-    <% Star::STAR_TYPES.map do |type, values| %>
+    <% Star.sorted_star_types.map do |type, values| %>
       <li>
         <% image_path = "/images/star-types/#{type}.png" %>
         <div class="star_image_container" data-label="star_type_<%= type %>">
