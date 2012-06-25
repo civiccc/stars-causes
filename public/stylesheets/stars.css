@@ -42,10 +42,15 @@ section {
 
 .star_image {
   left: 10px;
+  padding: 2px;
   position: absolute;
   top: 10px;
   background: #fff;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, .1);
+}
+.star_image img {
+  height: 45px;
+  width: 45px;
 }
 .multi .star_image img {
   width: 30px;
@@ -338,13 +343,13 @@ h2 {
 #new_star_form #selected_star:hover {
   background-color: #2995aa;
 }
-#new_star_form * {
-  vertical-align: middle;
-}
 #new_star_form #selected_star_image {
   height: 40px;
   margin-right: 2px;
   width: 40px;
+}
+#new_star_form #selected_star * {
+  vertical-align: middle;
 }
 #star_chooser {
   padding-top: 10px;

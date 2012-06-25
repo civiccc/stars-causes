@@ -251,6 +251,12 @@ html[xmlns] .clearfix {
 .chzn-results {
   background: #134760;
 }
+.chzn-container .chzn-results li {
+  background: #172f41;
+}
+.chzn-container .chzn-results li.highlighted {
+  background: #2395a7;
+}
 
 .star_count {
   background-image: url('/images/stars_icon.png');
