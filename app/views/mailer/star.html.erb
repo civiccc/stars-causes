@@ -22,23 +22,24 @@
         <%= photo(@star.to.first) %>
       </div>
       <div style="margin-left: 70px">
-        <%= @star.reason %><br />
-        <br />
-        <%= link_to "Second", star_seconds_url(@star),
-                    :style => "
-                      color: #2995ad;
-                      font-size: 12px;
-                      font-family: Helvetica, sans-serif;
-                      font-weight: bold;
-                    text-decoration: none" %>
-        <span style="color: #888; margin: 0 5px">|</span>
-        <%= link_to "Comment", star_url(@star),
-                    :style => "
-                      color: #2995ad;
-                      font-size: 12px;
-                      font-family: Helvetica, sans-serif;
-                      font-weight: bold;
-                    text-decoration: none" %>
+        <%= @star.reason %>
+        <div style="margin-top: 10px;">
+          <%= link_to "Second", star_seconds_url(@star),
+                      :style => "
+                        color: #2995ad;
+                        font-size: 12px;
+                        font-family: Helvetica, sans-serif;
+                        font-weight: bold;
+                      text-decoration: none" %>
+          <span style="color: #888; margin: 0 3px">&middot;</span>
+          <%= link_to "Comment", star_url(@star),
+                      :style => "
+                        color: #2995ad;
+                        font-size: 12px;
+                        font-family: Helvetica, sans-serif;
+                        font-weight: bold;
+                      text-decoration: none" %>
+        </div>
       </div>
     </div>
     <%= link_to "&#9733; View Star", star_url(@star),
