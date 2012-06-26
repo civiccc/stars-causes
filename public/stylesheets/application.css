@@ -78,7 +78,9 @@ form input[type=submit] {
 #container {
   background-attachment: fixed;
   background-image: url('/images/night_bg.png');
+  background-repeat: repeat-x;
   position: relative;
+  background-color: #125592;
 }
 #header {
   margin: 0 auto 20px;
