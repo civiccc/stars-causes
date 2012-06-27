@@ -50,3 +50,12 @@ teambuilding:
   title: Teambuilding Star
   description: For building team
   order: 2
+flash:
+  title: Lightning Star
+  order: 2
+hacker:
+  title: Hacker Star
+  order: 2
+super:
+  title: Super Star
+  order: 2
