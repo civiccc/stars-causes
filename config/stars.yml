@@ -51,7 +51,7 @@ teambuilding:
   description: For building team
   order: 2
 flash:
-  title: Flash Star
+  title: Lightning Star
   order: 2
 hacker:
   title: Hacker Star
