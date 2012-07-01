@@ -26,7 +26,7 @@ Stars.Scene = (function($) {
     $('form[data-remote]').live('ajax:beforeSend', function(e, xhr, status) {
       $(this).find("input").attr('disabled', 'disabled');
     });
-
+    
     $('form[data-remote]').live('ajax:complete', function(e, xhr, status) {
       if ($(this).data("replace-id")) {
         replaceId = $(this).data("replace-id");
