@@ -59,3 +59,9 @@ hacker:
 super:
   title: Super Star
   order: 2
+detective:
+  title: Detective Star
+  order: 2
+north:
+  title: North Star
+  order: 2
