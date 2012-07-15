@@ -36,6 +36,9 @@ Stars.Scene = (function($) {
   };
 
   var initStarChooser = function() {
+    $("#new_star_form").submit(function() {
+      $(this).find("input:submit").attr("disabled", true);
+    });
     $("#star_chooser").dialog({width: 640, autoOpen: false, closeText: ''});
     $("#selected_star").click(function() {
       $("#star_chooser").dialog('open');
