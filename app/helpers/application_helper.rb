@@ -19,7 +19,7 @@ module ApplicationHelper
     image_url =
       "http://graph.facebook.com/#{user.facebook_uid.to_i}/picture?type=square"
     link_to image_tag(image_url, :class => 'user_photo', :alt => '',
-                      :title => user.name)
+                      :title => user.name),
       user_url(user)
   end
 
