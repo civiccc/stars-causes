@@ -52,3 +52,6 @@ detective:
 north:
   title: North Star
   order: 2
+trek:
+  title: Trek Star
+  order: 2
