@@ -55,3 +55,6 @@ north:
 trek:
   title: Trek Star
   order: 2
+recruiting:
+  title: Recruiting Star
+  order: 2
