@@ -8,7 +8,6 @@ gem 'hoptoad_notifier', '2.4.11'
 group :development do
   gem 'heroku'
   gem 'sqlite3-ruby', '1.2.5'
-  gem 'taps'
 end
 
 group :production do

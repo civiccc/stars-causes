@@ -44,15 +44,7 @@ GEM
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rubyzip (0.9.9)
-    sequel (3.20.0)
-    sinatra (1.0)
-      rack (>= 1.0)
     sqlite3-ruby (1.2.5)
-    taps (0.3.24)
-      rack (>= 1.0.1)
-      rest-client (>= 1.4.0, < 1.7.0)
-      sequel (~> 3.20.0)
-      sinatra (~> 1.0.0)
 
 PLATFORMS
   ruby
@@ -64,4 +56,3 @@ DEPENDENCIES
   pg
   rails (~> 2.3.16)
   sqlite3-ruby (= 1.2.5)
-  taps
