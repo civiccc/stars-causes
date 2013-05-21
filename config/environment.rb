@@ -6,9 +6,7 @@ Rails::Initializer.run do |config|
   config.gem 'hoptoad_notifier'
 
   config.action_mailer.default_url_options ||= {:host => 'localhost:3000'}
-  config.action_controller.session = {
-    :key => "_mockr_session", :secret => "my cat is yellow"
-  }
+
   config.action_controller.asset_host = "http://#{ENV['APP_HOST']}"
 end
 
