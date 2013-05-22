@@ -11,13 +11,16 @@ different organizations of various sizes.
 # Installation
 
 ## Locally
-Stars works on Ruby 1.8.7 and Rails 2.3. To install locally (Linux / OS X):
+Stars works on most Ruby versions (1.8.7, 1.9.2, 1.9.3) and Rails 2.3. Ruby 2.0
+is currently not supported due to the old Rails dependency. To install locally
+(Linux / OS X):
 
     git clone https://github.com/causes/stars-causes stars
     cd stars
     bundle install
+    cp config/database.yml{.example,}
     bundle exec rake db:migrate
-    bundle exec script/server
+    script/server
 
 ## Heroku
 If you'd like to deploy this to Heroku as well:
