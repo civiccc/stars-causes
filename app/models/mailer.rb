@@ -3,12 +3,13 @@ ActionMailer::Base.default_content_type = 'text/html'
 class Mailer < ActionMailer::Base
   FROM = "noreply@#{ENV['APP_HOST']}"
   helper :application
-  
+
   def star(star)
     subject "#{star.to_sentence} got a star!"
     recipients EVERYONE
     from FROM
     body :star => star
+    content_type 'multipart/alternative'
   end
 
   def comment(comment)
