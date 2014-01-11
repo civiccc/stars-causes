@@ -23,6 +23,8 @@ class StarsController < ApplicationController
   end
 
   def create
+    sanitize_recipient_ids(params[:star])
+
     @star = Star.new(params[:star].merge(:from_id => current_user.id))
     if !@star.save
       flash[:notice] = "To give a star, you need both a recipient and a reason."
@@ -45,5 +47,19 @@ class StarsController < ApplicationController
     @star.destroy
 
     redirect_to(stars_path)
+  end
+
+private
+
+  # Ensure list is an array (some browsers escape the string so that it
+  # doesn't get parsed by Rails as a list).
+  def sanitize_recipient_ids(star_params)
+    if star_params[:to_ids].is_a?(String)
+      begin
+        star_params[:to_ids] = JSON.parse(star_params[:to_ids])
+      rescue JSON::ParserError
+        # Let Rails handle the faulty input
+      end
+    end
   end
 end
