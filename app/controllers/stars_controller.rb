@@ -1,3 +1,5 @@
+require 'csv'
+
 class StarsController < ApplicationController
   def index
     page_size = 10
@@ -47,6 +49,51 @@ class StarsController < ApplicationController
     @star.destroy
 
     redirect_to(stars_path)
+  end
+
+  def recent
+    from = begin
+             Date.parse params[:from]
+           rescue ArgumentError, TypeError
+             30.days.ago.to_date
+           end
+    to   = begin
+             Date.parse params[:to]
+           rescue ArgumentError, TypeError
+             Date.tomorrow
+           end
+    stars = Star.past_period_by_user(from, to)
+
+    # Map stars to something more readable
+    stars.each do |name, the_stars|
+      the_stars.map! do |star|
+        {
+            from:    star.from.name,
+            reason:  star.reason,
+            type:    star.star_type,
+            seconds: star.num_seconds
+        }
+      end
+    end
+
+    result = {
+      from:  from.to_s,
+      to:    to.to_s,
+      stars: stars
+    }
+    respond_to do |format|
+      format.json { render json: result }
+      format.csv  do
+        csv_string = CSV.generate do |csv|
+          stars.each do |name, the_stars|
+            the_stars.each do |star|
+              csv << [name].concat(star.values.flatten)
+            end
+          end
+        end
+        render text: csv_string
+      end
+    end
   end
 
 private

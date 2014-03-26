@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :comments
 
-  map.resources :stars do |stars|
+  map.resources :stars, :collection => { :recent => :get } do |stars|
     stars.resources :seconds
   end
   map.resources :user_sessions

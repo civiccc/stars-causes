@@ -27,10 +27,10 @@ class Star < ActiveRecord::Base
   	names.to_sentence
   end
 
-  def self.past_week_by_user
-    Star.all(:conditions => {:created_at => 1.week.ago..Time.now}).
-         group_by(&:to).
-         sort_by {|(user, stars)| stars.size}.reverse
+  def self.past_period_by_user(from = 1.week.ago, to = Time.now)
+    Star.all(conditions: { created_at: from..to }).
+         group_by(&:to_sentence).
+         sort_by { |(user, stars)| stars.size }.reverse
   end
 
   def num_seconds
