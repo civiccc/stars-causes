@@ -11,26 +11,13 @@ GEM
     activeresource (2.3.18)
       activesupport (= 2.3.18)
     activesupport (2.3.18)
-    addressable (2.3.4)
     authlogic (2.1.6)
       activesupport
     builder (3.2.0)
-    excon (0.22.1)
-    heroku (2.39.3)
-      heroku-api (~> 0.3.7)
-      launchy (>= 0.3.2)
-      netrc (~> 0.7.7)
-      rest-client (~> 1.6.1)
-      rubyzip
-    heroku-api (0.3.11)
-      excon (~> 0.22.1)
     hoptoad_notifier (2.4.11)
       activesupport
       builder
-    launchy (2.3.0)
-      addressable (~> 2.3)
-    mime-types (1.23)
-    netrc (0.7.7)
+    kgio (2.9.2)
     pg (0.15.1)
     rack (1.1.6)
     rails (2.3.18)
@@ -40,19 +27,21 @@ GEM
       activeresource (= 2.3.18)
       activesupport (= 2.3.18)
       rake (>= 0.8.3)
+    raindrops (0.13.0)
     rake (10.0.4)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
-    rubyzip (0.9.9)
     sqlite3-ruby (1.2.5)
+    unicorn (4.8.3)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   authlogic (= 2.1.6)
-  heroku
   hoptoad_notifier (= 2.4.11)
   pg
   rails (~> 2.3.16)
   sqlite3-ruby (= 1.2.5)
+  unicorn
